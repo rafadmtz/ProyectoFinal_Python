@@ -78,7 +78,7 @@ def main():
 
     deseq_df = du.read_tsv(args.input)
 
-    gff = du.leer_gff(args.gff)
+    gff = du.read_gff(args.gff)
 
     gene_dict = {}
 
@@ -94,9 +94,14 @@ def main():
     umbral_padj = args.padj_threshold
     umbral_lfc = args.lfc_threshold
 
-    clasificacion_df = du.clasificar_genes(deseq_df, umbral_padj, umbral_lfc)
+    clasificacion_df = du.classify_gene(deseq_df, umbral_padj, umbral_lfc)
 
-    du.imprimir_resumen(clasificacion_df)
+    du.imprimir_resumen(
+        clasificacion_df,
+        args.input,
+        umbral_padj,
+        umbral_lfc
+    )
 
     anotacio_df=du.agregar_anotacion_funcional(clasificacion_df, gene_dict)
 

@@ -49,17 +49,36 @@ def read_tsv(filepath: str) -> pd.DataFrame:
     -------
     pd.DataFrame
         DataFrame con el contenido del archivo TSV.
-        Regresa None si el archivo no se encuentra.
+        Regresa None si el archivo no se encuentra o si hay valores inválidos.
     """
     try:
         df = pd.read_csv(filepath, sep="\t")
+
+        columnas_numericas = [
+            "baseMean",
+            "log2FoldChange",
+            "lfcSE",
+            "stat",
+            "pvalue",
+            "padj"
+        ]
+
+        for columna in columnas_numericas:
+            df[columna] = pd.to_numeric(df[columna], errors="raise")
+
+        print(f"Genes cargados del TSV: {len(df)}")
+
         return df
 
     except FileNotFoundError:
         print(f"No se encontro el archivo: {filepath}")
         return None
 
-def leer_gff(filepath: str) -> pd.DataFrame:
+    except ValueError as error:
+        print(f"Error al leer valores numericos del TSV: {error}")
+        return None
+
+def read_gff(filepath: str) -> pd.DataFrame:
     """
     Lee un archivo GFF3 ignorando las líneas de comentario.
 
@@ -98,6 +117,10 @@ def leer_gff(filepath: str) -> pd.DataFrame:
     except FileNotFoundError:
         print(f"No se encontro el archivo: {filepath}")
         return None
+    
+    except ValueError as error:
+        print(f"Error al leer el archivo GFF: {error}")
+        return None
 
     return gff
 
@@ -135,7 +158,7 @@ def parse_attributes(attributes: str) -> dict:
 
     return info
 
-def clasificar_genes(
+def classify_gene(
     deseq_df: pd.DataFrame,
     umbral_padj: float,
     umbral_lfc: float
@@ -179,7 +202,10 @@ def clasificar_genes(
     return pd.DataFrame(genes_clasificados)
 
 def imprimir_resumen(
-    clasificacion_df: pd.DataFrame
+    clasificacion_df: pd.DataFrame,
+    archivo_analizado: str = None,
+    umbral_padj: float = None,
+    umbral_lfc: float = None
 ) -> None:
     """
     Imprime el resumen de genes clasificados por categoría.
@@ -188,6 +214,13 @@ def imprimir_resumen(
     ----------
     clasificacion_df : pd.DataFrame
         DataFrame con una columna llamada 'cambio'.
+    archivo_analizado : str
+        Ruta del archivo analizado.
+    umbral_padj : float
+        Umbral usado para padj.
+    umbral_lfc : float
+        Umbral usado para log2FoldChange.
+
     Returns
     -------
     None
@@ -199,6 +232,16 @@ def imprimir_resumen(
 
     print("Resumen del analisis")
     print("--------------------")
+
+    if archivo_analizado is not None:
+        print(f"Archivo analizado: {archivo_analizado}")
+
+    if umbral_padj is not None:
+        print(f"Umbral padj: {umbral_padj}")
+
+    if umbral_lfc is not None:
+        print(f"Umbral log2FoldChange: {umbral_lfc}")
+
     print(f"Total de genes analizados: {total_genes}")
     print()
 
@@ -213,9 +256,6 @@ def imprimir_resumen(
             porcentaje = 0
 
         print(f"{categoria}: {cantidad} genes ({porcentaje:.2f}%)")
-        
-import pandas as pd
-
 
 def agregar_anotacion_funcional(
     clasificacion_df: pd.DataFrame,

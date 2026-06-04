@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT_DIR))
 
-from deseq_utils import clasificar_genes, find_extremes
+from deseq_utils import classify_gene, find_extremes
 
 # ── Uso de IA ───────────────────────────────────────────────
 # Herramienta : ChatGPT
@@ -30,7 +30,7 @@ def test_clasificar_upregulated():
         }
     ])
 
-    resultado = clasificar_genes(df, umbral_padj=0.05, umbral_lfc=1.0)
+    resultado = classify_gene(df, umbral_padj=0.05, umbral_lfc=1.0)
 
     assert resultado.loc[0, "cambio"] == "upregulated"
 
@@ -45,7 +45,7 @@ def test_clasificar_downregulated():
         }
     ])
 
-    resultado = clasificar_genes(df, umbral_padj=0.05, umbral_lfc=1.0)
+    resultado = classify_gene(df, umbral_padj=0.05, umbral_lfc=1.0)
 
     assert resultado.loc[0, "cambio"] == "downregulated"
 
@@ -59,7 +59,7 @@ def test_clasificar_no_change_by_lfc():
         }
     ])
 
-    resultado = clasificar_genes(df, umbral_padj=0.05, umbral_lfc=1.0)
+    resultado = classify_gene(df, umbral_padj=0.05, umbral_lfc=1.0)
 
     assert resultado.loc[0, "cambio"] == "no_change"
 
@@ -73,7 +73,7 @@ def test_clasificar_no_change_by_padj():
         }
     ])
 
-    resultado = clasificar_genes(df, umbral_padj=0.05, umbral_lfc=1.0)
+    resultado = classify_gene(df, umbral_padj=0.05, umbral_lfc=1.0)
 
     assert resultado.loc[0, "cambio"] == "no_change"
 

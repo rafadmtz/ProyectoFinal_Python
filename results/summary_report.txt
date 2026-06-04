@@ -1,7 +1,7 @@
 Resumen del analisis de genes diferencialmente expresados
 ========================================================
 
-Archivo analizado: .\datos\iav_deseq2_results.tsv
+Archivo analizado: datos/iav_deseq2_results.tsv
 Umbral padj: 0.05
 Umbral log2FoldChange: 1.0
 Total de genes analizados: 351
