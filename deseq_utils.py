@@ -32,7 +32,8 @@
 
 # ────────────────────────────────────────────────────────────
 
-
+import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 
 def read_tsv(filepath: str) -> pd.DataFrame:
@@ -368,7 +369,7 @@ def guardar_archivos_salida(
         file.write("--------------\n")
 
         for nombre, gen in extremos.items():
-            if gen:
+            if gen is not None:
                 file.write(
                     f"{nombre}: {gen['gene_id']} "
                     f"log2FoldChange={gen['log2FoldChange']} "
@@ -376,12 +377,111 @@ def guardar_archivos_salida(
                 )
             else:
                 file.write(f"{nombre}: no disponible\n")
-    file.write("\nGenes diferencialmente expresados con descripcion\n")
-    file.write("-------------------------------------------------\n")
+        file.write("\nGenes diferencialmente expresados con descripcion\n")
+        file.write("-------------------------------------------------\n")
 
-    anotacion_df.to_csv(
-        file,
-        sep="\t",
-        index=False,
-        columns=["gene_id", "cambio", "log2FoldChange", "padj", "description"]
+        anotacion_df.to_csv(
+            file,
+            sep="\t",
+            index=False,
+            columns=["gene_id", "cambio", "log2FoldChange", "padj", "description"]
+        )
+
+def guardar_volcano_plot(
+    clasificacion_df: pd.DataFrame,
+    output_dir: str,
+    umbral_padj: float,
+    umbral_lfc: float
+) -> None:
+    """
+    Genera y guarda un volcano plot del análisis diferencial.
+
+    Parameters
+    ----------
+    clasificacion_df : pd.DataFrame
+        DataFrame con todos los genes clasificados. Debe contener las columnas
+        gene_id, log2FoldChange, padj y cambio.
+    output_dir : str
+        Directorio donde se guardará la imagen.
+    umbral_padj : float
+        Umbral de padj usado para significancia.
+    umbral_lfc : float
+        Umbral de log2FoldChange usado para clasificar genes.
+
+    Returns
+    -------
+    None
+        Guarda el gráfico como volcano_plot.png.
+    """
+    output_path = Path(output_dir)
+    output_path.mkdir(parents=True, exist_ok=True)
+
+    df = clasificacion_df.copy()
+
+    df["padj"] = pd.to_numeric(df["padj"], errors="coerce")
+    df["log2FoldChange"] = pd.to_numeric(df["log2FoldChange"], errors="coerce")
+
+    df = df.dropna(subset=["padj", "log2FoldChange"])
+
+    df["padj_plot"] = df["padj"].replace(0, np.nextafter(0, 1))
+    df["minus_log10_padj"] = -np.log10(df["padj_plot"])
+
+    colores = {
+        "upregulated": "red",
+        "downregulated": "blue",
+        "no_change": "gray"
+    }
+
+    plt.figure(figsize=(8, 6))
+
+    for categoria, color in colores.items():
+        subset = df[df["cambio"] == categoria]
+
+        plt.scatter(
+            subset["log2FoldChange"],
+            subset["minus_log10_padj"],
+            c=color,
+            label=categoria,
+            alpha=0.7,
+            s=25
+        )
+
+    plt.axvline(
+        x=umbral_lfc,
+        linestyle="--",
+        color="black",
+        linewidth=1
     )
+
+    plt.axvline(
+        x=-umbral_lfc,
+        linestyle="--",
+        color="black",
+        linewidth=1
+    )
+
+    plt.axhline(
+        y=-np.log10(umbral_padj),
+        linestyle="--",
+        color="black",
+        linewidth=1
+    )
+
+    top_genes = df.sort_values("padj").head(5)
+
+    for _, gene in top_genes.iterrows():
+        plt.text(
+            gene["log2FoldChange"],
+            gene["minus_log10_padj"],
+            gene["gene_id"],
+            fontsize=8
+        )
+
+    plt.title("Volcano plot: IAV vs Mock")
+    plt.xlabel("log2FoldChange")
+    plt.ylabel("-log10(padj)")
+    plt.legend()
+    plt.tight_layout()
+
+    plt.savefig(output_path / "volcano_plot.png", dpi=300)
+    plt.close()

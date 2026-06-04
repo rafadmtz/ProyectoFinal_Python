@@ -1,0 +1,123 @@
+Resumen del analisis de genes diferencialmente expresados
+========================================================
+
+Archivo analizado: .\datos\iav_deseq2_results.tsv
+Umbral padj: 0.05
+Umbral log2FoldChange: 1.0
+Total de genes analizados: 351
+
+Conteo por categoria
+--------------------
+upregulated: 60 genes (17.09%)
+downregulated: 40 genes (11.40%)
+no_change: 251 genes (71.51%)
+
+Genes extremos
+--------------
+mas_inducido: ISG15 log2FoldChange=10.2357 padj=0.005496
+mas_reprimido: MYC log2FoldChange=-3.4179 padj=0.000818
+mas_significativo: RPS6 log2FoldChange=-1.2671 padj=4e-06
+
+Genes diferencialmente expresados con descripcion
+-------------------------------------------------
+gene_id	cambio	log2FoldChange	padj	description
+FASN	downregulated	-1.8564	0.004207	fatty acid synthase, de novo lipogenesis, required for viral membrane, suppressed by IFN
+KRAS	downregulated	-1.4708	0.009944	KRAS proto-oncogene, GTPase, RAS/MAPK signaling, modulated in viral infection
+FAS	upregulated	3.8425	0.00096	Fas cell surface death receptor, apoptosis via extrinsic pathway, upregulated by IFN
+MKI67	downregulated	-2.9879	0.001	marker of proliferation Ki-67, cell cycle progression, widely used proliferation marker
+G6PD	downregulated	-1.5358	0.003038	glucose-6-phosphate dehydrogenase, pentose phosphate pathway, redox balance
+VIM	downregulated	-2.1647	0.005078	vimentin, intermediate filament protein, cytoskeletal reorganization, viral entry cofactor
+SLC2A1	downregulated	-1.5279	0.004572	solute carrier family 2 member 1 (GLUT1), glucose transporter, metabolic reprogramming
+OAS1	upregulated	7.7669	0.003017	2'-5'-oligoadenylate synthetase 1, activates RNase L, degrades viral RNA
+XIAP	downregulated	-1.7521	0.002586	X-linked inhibitor of apoptosis, inhibits caspases 3, 7, 9, downregulated in infection
+ISG20	upregulated	5.2831	0.001048	interferon-stimulated exonuclease gene 20, degrades single-stranded viral RNA
+IRF7	upregulated	6.6533	0.003183	interferon regulatory factor 7, master regulator of type I interferon response
+CXCL10	upregulated	8.8641	0.001339	C-X-C motif chemokine ligand 10 (IP-10), recruits NK cells and T cells, strong ISG
+OASL	upregulated	4.8429	0.003994	2'-5'-oligoadenylate synthetase-like, enhances RIG-I signaling
+ACLY	downregulated	-2.1018	2.6e-05	ATP-citrate lyase, links TCA cycle to lipid synthesis, metabolic reprogramming in infection
+IFIH1	upregulated	5.6677	0.003127	interferon induced with helicase C domain 1 (MDA5), detects long dsRNA of viral origin
+CDK4	downregulated	-2.6789	0.000318	cyclin-dependent kinase 4, G1 phase progression, inhibited during viral stress
+BST2	upregulated	6.464	0.001706	bone marrow stromal antigen 2 (Tetherin), restricts budding of enveloped viruses
+CCND1	downregulated	-2.7714	0.011405	cyclin D1, G1/S cell cycle regulator, CDK4/6 activator, suppressed during viral infection
+TNF	upregulated	4.6093	0.000877	tumor necrosis factor, pro-inflammatory cytokine, activates NF-kB, antiviral and pathological in IAV
+PIK3CA	downregulated	-1.922	0.01012	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha, PI3K/AKT pathway
+RSAD2	upregulated	8.1292	0.008417	radical S-adenosyl methionine domain-containing protein 2 (Viperin), broad antiviral activity against IAV
+BCL2	downregulated	-1.9083	0.006139	BCL2 apoptosis regulator, anti-apoptotic, mitochondrial membrane, downregulated by IAV
+ZNFX1	upregulated	4.1452	0.005905	zinc finger NFX1-type containing 1, antiviral RNA helicase, ISG
+DDX58	upregulated	6.6916	0.001146	DExD/H-box helicase 58 (RIG-I), cytosolic RNA helicase, detects 5'-triphosphate viral RNA
+PTPN6	downregulated	-1.8233	0.013179	protein tyrosine phosphatase non-receptor type 6 (SHP-1), negative immune regulator
+SAMD9L	upregulated	4.4036	0.000825	sterile alpha motif domain-containing protein 9-like, antiviral, innate immunity
+IFITM3	upregulated	8.8809	0.001986	interferon-induced transmembrane protein 3, key restriction factor for IAV, GWAS influenza severity
+MCM2	downregulated	-2.82	0.003527	minichromosome maintenance complex component 2, DNA replication helicase, cell cycle
+HERC5	upregulated	6.101	0.011945	HECT and RLD domain-containing E3 ubiquitin ligase family member 5, ISGylation, antiviral
+MTOR	downregulated	-1.4592	0.006216	mechanistic target of rapamycin kinase, nutrient sensing, translation control, IAV antagonizes
+ISG15	upregulated	10.2357	0.005496	ISG15 ubiquitin-like modifier, conjugated to proteins during viral infection, antiviral
+APOBEC3A	upregulated	3.8668	0.002326	apolipoprotein B mRNA editing enzyme catalytic subunit 3A, cytidine deaminase, antiviral
+TRIM22	upregulated	5.2791	0.00193	tripartite motif-containing protein 22, E3 ubiquitin ligase, restricts IAV and HIV
+SP100	upregulated	3.7414	0.002008	SP100 nuclear antigen, component of PML bodies, antiviral, interferon-induced
+ATP6V1B2	downregulated	-1.6863	0.003371	ATPase H+ transporting V1 subunit B2, vacuolar H-ATPase, endosomal acidification, viral entry
+IFI6	upregulated	5.9171	0.000312	interferon-alpha inducible protein 6, anti-apoptotic, interferon response
+TLR3	upregulated	3.18	0.002438	toll-like receptor 3, recognizes double-stranded RNA, triggers interferon response
+OAS2	upregulated	6.1049	0.007062	2'-5'-oligoadenylate synthetase 2, antiviral innate immunity
+PCNA	downregulated	-1.8455	0.005643	proliferating cell nuclear antigen, DNA clamp for replication, cell cycle marker
+OAS3	upregulated	6.0862	0.000406	2'-5'-oligoadenylate synthetase 3, activates RNase L pathway
+IFIT1	upregulated	8.6901	0.006693	interferon-induced protein with tetratricopeptide repeats 1, antiviral, inhibits viral RNA replication
+MX2	upregulated	5.0667	0.007146	MX dynamin-like GTPase 2, antiviral activity against retroviruses and rhabdoviruses
+DHX58	upregulated	3.973	0.000898	DExH-box helicase 58 (LGP2), RNA helicase, modulates RIG-I/MDA5 signaling
+IFITM1	upregulated	7.7446	0.004299	interferon-induced transmembrane protein 1, blocks viral entry into host cells
+IFNL1	upregulated	6.517	0.002665	interferon lambda 1 (IL-29), antiviral, acts on epithelial cells
+UBE2L6	upregulated	4.9464	0.00778	ubiquitin-conjugating enzyme E2 L6, ISGylation pathway, antiviral
+STAT1	upregulated	5.6565	0.001167	signal transducer and activator of transcription 1, central mediator of interferon signaling
+IL8	upregulated	6.7562	0.011449	C-X-C motif chemokine ligand 8 (IL-8/CXCL8), neutrophil chemoattractant, NF-kB target
+CXCL9	upregulated	7.1675	0.004763	C-X-C motif chemokine ligand 9 (MIG), interferon-gamma-induced, T-cell recruitment
+IFI44L	upregulated	6.7419	0.002338	interferon-induced protein 44-like, ISG, exact function unclear
+CXCL11	upregulated	6.7014	0.010517	C-X-C motif chemokine ligand 11 (I-TAC), binds CXCR3, antiviral inflammation
+MAVS	upregulated	3.5857	0.003806	mitochondrial antiviral signaling protein, adaptor for RIG-I/MDA5 pathway
+SAMHD1	upregulated	3.8978	0.005448	SAM and HD domain-containing protein 1, dNTPase, restricts retroviruses and DNA viruses
+SOCS1	downregulated	-2.26	0.006244	suppressor of cytokine signaling 1, negative feedback of JAK-STAT, exploited by viruses
+EIF4E	downregulated	-1.5652	0.006272	eukaryotic translation initiation factor 4E, cap-dependent translation, mTOR target
+RPS6	downregulated	-1.2671	4e-06	ribosomal protein S6, eS6, phosphorylated by mTOR pathway, translation regulation
+IFITM2	upregulated	5.9493	0.001383	interferon-induced transmembrane protein 2, restricts influenza and other viruses
+SLC3A2	downregulated	-1.6521	0.003058	solute carrier family 3 member 2, amino acid transport, viral metabolism
+RPL5	downregulated	-1.6962	0.011403	ribosomal protein L5, uL18 in new nomenclature, tumor suppressor, ribosome biogenesis
+MYC	downregulated	-3.4179	0.000818	MYC proto-oncogene, transcription factor, promotes cell proliferation, downregulated in viral stress
+E2F1	downregulated	-2.6611	0.012476	E2F transcription factor 1, activates S-phase genes, downregulated in infected cells
+IFIT2	upregulated	7.2339	0.001379	interferon-induced protein with tetratricopeptide repeats 2, blocks viral translation
+CCND3	downregulated	-2.2762	0.002342	cyclin D3, G1/S cell cycle progression, downregulated in viral infection
+CDH1	downregulated	-2.1029	0.000855	cadherin 1 (E-cadherin), epithelial cell-cell adhesion, tight junction component
+STING1	upregulated	4.4681	0.003052	stimulator of interferon response cGAMP interactor 1, cGAS-STING innate immune pathway
+IFNL2	upregulated	4.8949	4e-06	interferon lambda 2 (IL-28A), antiviral cytokine, respiratory epithelium
+IFNB1	upregulated	7.4673	0.009888	interferon beta 1, key antiviral cytokine, activates JAK-STAT signaling
+ITGA5	downregulated	-1.3413	0.004142	integrin subunit alpha 5, fibronectin receptor, cell adhesion, viral entry modulator
+IL1B	upregulated	4.7375	0.000471	interleukin 1 beta, pro-inflammatory cytokine, inflammasome product, IAV pathogenesis
+TRIM25	upregulated	4.0535	0.003828	tripartite motif-containing protein 25, ubiquitinates RIG-I for activation, antiviral
+SCD	downregulated	-1.8122	0.004451	stearoyl-CoA desaturase, lipid desaturation, required for enveloped virus assembly
+AKT1	downregulated	-1.3669	0.002384	AKT serine/threonine kinase 1, PI3K/AKT survival signaling, viral immune evasion target
+IFIT5	upregulated	4.4986	0.002475	interferon-induced protein with tetratricopeptide repeats 5, single-stranded RNA binding
+CASP1	upregulated	4.2968	0.005099	caspase 1, inflammasome effector, processes IL-1B and IL-18, pyroptosis
+CDK6	downregulated	-1.8348	0.011527	cyclin-dependent kinase 6, G1 phase, phosphorylates Rb, suppressed by IAV
+IL6	upregulated	5.0398	0.004498	interleukin 6, pleiotropic cytokine, acute phase response, pro-inflammatory in IAV
+EGFR	downregulated	-2.1918	0.003426	epidermal growth factor receptor, RTK, activated transiently then suppressed in IAV
+IRF9	upregulated	4.6208	0.002075	interferon regulatory factor 9, forms ISGF3 complex with STAT1/STAT2
+MCM4	downregulated	-2.1083	0.004718	minichromosome maintenance complex component 4, DNA replication, suppressed by viral infection
+ADAR	upregulated	5.1054	0.000543	adenosine deaminase RNA-specific, edits viral RNA, ISG, innate immune modulation
+MX1	upregulated	9.0299	0.005772	MX dynamin-like GTPase 1, inhibits influenza virus replication, interferon-stimulated gene
+SOCS3	downregulated	-2.1259	0.011298	suppressor of cytokine signaling 3, JAK-STAT negative regulator, viral immune evasion
+IFI27	upregulated	6.0409	0.00041	interferon-alpha inducible protein 27, pro-apoptotic, ISG
+MBD2	downregulated	-1.5878	0.002881	methyl-CpG binding domain protein 2, DNA methylation reader, gene silencing
+SP1	downregulated	-1.4755	0.008782	Sp1 transcription factor, GC-box binding, ubiquitous activator
+IFI44	upregulated	6.7946	0.010435	interferon-induced protein 44, antiviral, GTPase activity
+TRAIL	upregulated	4.1568	0.001832	TNF superfamily member 10 (TRAIL/TNFSF10), induces apoptosis in virus-infected cells
+STAT2	upregulated	4.1673	0.000608	signal transducer and activator of transcription 2, type I interferon signaling, ISGF3 component
+FN1	downregulated	-2.4691	0.004805	fibronectin 1, extracellular matrix glycoprotein, cell adhesion, reduced in viral infection
+IFIT3	upregulated	6.7513	0.005138	interferon-induced protein with tetratricopeptide repeats 3, antiviral defense
+HERC6	upregulated	5.2069	0.003025	HECT and RLD domain-containing E3 ubiquitin ligase family member 6, ISGylation
+IFNAR1	upregulated	3.6601	0.000632	interferon alpha and beta receptor subunit 1, JAK-STAT signaling receptor
+IFNA1	upregulated	4.7469	0.009213	interferon alpha 1, antiviral cytokine, type I interferon family
+EIF2AK2	upregulated	5.8529	0.002299	eukaryotic translation initiation factor 2-alpha kinase 2 (PKR), senses dsRNA, inhibits translation
+TOP2A	downregulated	-2.0466	0.005962	topoisomerase II alpha, DNA decatenation, required for mitosis, downregulated in stressed cells
+CCL5	upregulated	8.4652	0.002391	C-C motif chemokine ligand 5 (RANTES), recruits memory T cells and NK cells, anti-influenza
+IFI35	upregulated	3.7983	0.005255	interferon-induced protein 35, forms complex with NMI, ISG
+ACACA	downregulated	-1.6152	0.001763	acetyl-CoA carboxylase alpha, first step of fatty acid synthesis, downregulated in viral stress
+CCND2	downregulated	-2.5508	0.011396	cyclin D2, G1/S transition, suppressed by viral stress response
+MCL1	downregulated	-1.7552	0.004085	MCL1 apoptosis regulator, anti-apoptotic BCL2 family, suppressed in viral infection

@@ -1,0 +1,41 @@
+gene_id	log2FoldChange	padj	description
+FASN	-1.8564	0.004207	fatty acid synthase, de novo lipogenesis, required for viral membrane, suppressed by IFN
+KRAS	-1.4708	0.009944	KRAS proto-oncogene, GTPase, RAS/MAPK signaling, modulated in viral infection
+MKI67	-2.9879	0.001	marker of proliferation Ki-67, cell cycle progression, widely used proliferation marker
+G6PD	-1.5358	0.003038	glucose-6-phosphate dehydrogenase, pentose phosphate pathway, redox balance
+VIM	-2.1647	0.005078	vimentin, intermediate filament protein, cytoskeletal reorganization, viral entry cofactor
+SLC2A1	-1.5279	0.004572	solute carrier family 2 member 1 (GLUT1), glucose transporter, metabolic reprogramming
+XIAP	-1.7521	0.002586	X-linked inhibitor of apoptosis, inhibits caspases 3, 7, 9, downregulated in infection
+ACLY	-2.1018	2.6e-05	ATP-citrate lyase, links TCA cycle to lipid synthesis, metabolic reprogramming in infection
+CDK4	-2.6789	0.000318	cyclin-dependent kinase 4, G1 phase progression, inhibited during viral stress
+CCND1	-2.7714	0.011405	cyclin D1, G1/S cell cycle regulator, CDK4/6 activator, suppressed during viral infection
+PIK3CA	-1.922	0.01012	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha, PI3K/AKT pathway
+BCL2	-1.9083	0.006139	BCL2 apoptosis regulator, anti-apoptotic, mitochondrial membrane, downregulated by IAV
+PTPN6	-1.8233	0.013179	protein tyrosine phosphatase non-receptor type 6 (SHP-1), negative immune regulator
+MCM2	-2.82	0.003527	minichromosome maintenance complex component 2, DNA replication helicase, cell cycle
+MTOR	-1.4592	0.006216	mechanistic target of rapamycin kinase, nutrient sensing, translation control, IAV antagonizes
+ATP6V1B2	-1.6863	0.003371	ATPase H+ transporting V1 subunit B2, vacuolar H-ATPase, endosomal acidification, viral entry
+PCNA	-1.8455	0.005643	proliferating cell nuclear antigen, DNA clamp for replication, cell cycle marker
+SOCS1	-2.26	0.006244	suppressor of cytokine signaling 1, negative feedback of JAK-STAT, exploited by viruses
+EIF4E	-1.5652	0.006272	eukaryotic translation initiation factor 4E, cap-dependent translation, mTOR target
+RPS6	-1.2671	4e-06	ribosomal protein S6, eS6, phosphorylated by mTOR pathway, translation regulation
+SLC3A2	-1.6521	0.003058	solute carrier family 3 member 2, amino acid transport, viral metabolism
+RPL5	-1.6962	0.011403	ribosomal protein L5, uL18 in new nomenclature, tumor suppressor, ribosome biogenesis
+MYC	-3.4179	0.000818	MYC proto-oncogene, transcription factor, promotes cell proliferation, downregulated in viral stress
+E2F1	-2.6611	0.012476	E2F transcription factor 1, activates S-phase genes, downregulated in infected cells
+CCND3	-2.2762	0.002342	cyclin D3, G1/S cell cycle progression, downregulated in viral infection
+CDH1	-2.1029	0.000855	cadherin 1 (E-cadherin), epithelial cell-cell adhesion, tight junction component
+ITGA5	-1.3413	0.004142	integrin subunit alpha 5, fibronectin receptor, cell adhesion, viral entry modulator
+SCD	-1.8122	0.004451	stearoyl-CoA desaturase, lipid desaturation, required for enveloped virus assembly
+AKT1	-1.3669	0.002384	AKT serine/threonine kinase 1, PI3K/AKT survival signaling, viral immune evasion target
+CDK6	-1.8348	0.011527	cyclin-dependent kinase 6, G1 phase, phosphorylates Rb, suppressed by IAV
+EGFR	-2.1918	0.003426	epidermal growth factor receptor, RTK, activated transiently then suppressed in IAV
+MCM4	-2.1083	0.004718	minichromosome maintenance complex component 4, DNA replication, suppressed by viral infection
+SOCS3	-2.1259	0.011298	suppressor of cytokine signaling 3, JAK-STAT negative regulator, viral immune evasion
+MBD2	-1.5878	0.002881	methyl-CpG binding domain protein 2, DNA methylation reader, gene silencing
+SP1	-1.4755	0.008782	Sp1 transcription factor, GC-box binding, ubiquitous activator
+FN1	-2.4691	0.004805	fibronectin 1, extracellular matrix glycoprotein, cell adhesion, reduced in viral infection
+TOP2A	-2.0466	0.005962	topoisomerase II alpha, DNA decatenation, required for mitosis, downregulated in stressed cells
+ACACA	-1.6152	0.001763	acetyl-CoA carboxylase alpha, first step of fatty acid synthesis, downregulated in viral stress
+CCND2	-2.5508	0.011396	cyclin D2, G1/S transition, suppressed by viral stress response
+MCL1	-1.7552	0.004085	MCL1 apoptosis regulator, anti-apoptotic BCL2 family, suppressed in viral infection

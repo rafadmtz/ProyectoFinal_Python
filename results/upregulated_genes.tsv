@@ -1,0 +1,61 @@
+gene_id	log2FoldChange	padj	description
+FAS	3.8425	0.00096	Fas cell surface death receptor, apoptosis via extrinsic pathway, upregulated by IFN
+OAS1	7.7669	0.003017	2'-5'-oligoadenylate synthetase 1, activates RNase L, degrades viral RNA
+ISG20	5.2831	0.001048	interferon-stimulated exonuclease gene 20, degrades single-stranded viral RNA
+IRF7	6.6533	0.003183	interferon regulatory factor 7, master regulator of type I interferon response
+CXCL10	8.8641	0.001339	C-X-C motif chemokine ligand 10 (IP-10), recruits NK cells and T cells, strong ISG
+OASL	4.8429	0.003994	2'-5'-oligoadenylate synthetase-like, enhances RIG-I signaling
+IFIH1	5.6677	0.003127	interferon induced with helicase C domain 1 (MDA5), detects long dsRNA of viral origin
+BST2	6.464	0.001706	bone marrow stromal antigen 2 (Tetherin), restricts budding of enveloped viruses
+TNF	4.6093	0.000877	tumor necrosis factor, pro-inflammatory cytokine, activates NF-kB, antiviral and pathological in IAV
+RSAD2	8.1292	0.008417	radical S-adenosyl methionine domain-containing protein 2 (Viperin), broad antiviral activity against IAV
+ZNFX1	4.1452	0.005905	zinc finger NFX1-type containing 1, antiviral RNA helicase, ISG
+DDX58	6.6916	0.001146	DExD/H-box helicase 58 (RIG-I), cytosolic RNA helicase, detects 5'-triphosphate viral RNA
+SAMD9L	4.4036	0.000825	sterile alpha motif domain-containing protein 9-like, antiviral, innate immunity
+IFITM3	8.8809	0.001986	interferon-induced transmembrane protein 3, key restriction factor for IAV, GWAS influenza severity
+HERC5	6.101	0.011945	HECT and RLD domain-containing E3 ubiquitin ligase family member 5, ISGylation, antiviral
+ISG15	10.2357	0.005496	ISG15 ubiquitin-like modifier, conjugated to proteins during viral infection, antiviral
+APOBEC3A	3.8668	0.002326	apolipoprotein B mRNA editing enzyme catalytic subunit 3A, cytidine deaminase, antiviral
+TRIM22	5.2791	0.00193	tripartite motif-containing protein 22, E3 ubiquitin ligase, restricts IAV and HIV
+SP100	3.7414	0.002008	SP100 nuclear antigen, component of PML bodies, antiviral, interferon-induced
+IFI6	5.9171	0.000312	interferon-alpha inducible protein 6, anti-apoptotic, interferon response
+TLR3	3.18	0.002438	toll-like receptor 3, recognizes double-stranded RNA, triggers interferon response
+OAS2	6.1049	0.007062	2'-5'-oligoadenylate synthetase 2, antiviral innate immunity
+OAS3	6.0862	0.000406	2'-5'-oligoadenylate synthetase 3, activates RNase L pathway
+IFIT1	8.6901	0.006693	interferon-induced protein with tetratricopeptide repeats 1, antiviral, inhibits viral RNA replication
+MX2	5.0667	0.007146	MX dynamin-like GTPase 2, antiviral activity against retroviruses and rhabdoviruses
+DHX58	3.973	0.000898	DExH-box helicase 58 (LGP2), RNA helicase, modulates RIG-I/MDA5 signaling
+IFITM1	7.7446	0.004299	interferon-induced transmembrane protein 1, blocks viral entry into host cells
+IFNL1	6.517	0.002665	interferon lambda 1 (IL-29), antiviral, acts on epithelial cells
+UBE2L6	4.9464	0.00778	ubiquitin-conjugating enzyme E2 L6, ISGylation pathway, antiviral
+STAT1	5.6565	0.001167	signal transducer and activator of transcription 1, central mediator of interferon signaling
+IL8	6.7562	0.011449	C-X-C motif chemokine ligand 8 (IL-8/CXCL8), neutrophil chemoattractant, NF-kB target
+CXCL9	7.1675	0.004763	C-X-C motif chemokine ligand 9 (MIG), interferon-gamma-induced, T-cell recruitment
+IFI44L	6.7419	0.002338	interferon-induced protein 44-like, ISG, exact function unclear
+CXCL11	6.7014	0.010517	C-X-C motif chemokine ligand 11 (I-TAC), binds CXCR3, antiviral inflammation
+MAVS	3.5857	0.003806	mitochondrial antiviral signaling protein, adaptor for RIG-I/MDA5 pathway
+SAMHD1	3.8978	0.005448	SAM and HD domain-containing protein 1, dNTPase, restricts retroviruses and DNA viruses
+IFITM2	5.9493	0.001383	interferon-induced transmembrane protein 2, restricts influenza and other viruses
+IFIT2	7.2339	0.001379	interferon-induced protein with tetratricopeptide repeats 2, blocks viral translation
+STING1	4.4681	0.003052	stimulator of interferon response cGAMP interactor 1, cGAS-STING innate immune pathway
+IFNL2	4.8949	4e-06	interferon lambda 2 (IL-28A), antiviral cytokine, respiratory epithelium
+IFNB1	7.4673	0.009888	interferon beta 1, key antiviral cytokine, activates JAK-STAT signaling
+IL1B	4.7375	0.000471	interleukin 1 beta, pro-inflammatory cytokine, inflammasome product, IAV pathogenesis
+TRIM25	4.0535	0.003828	tripartite motif-containing protein 25, ubiquitinates RIG-I for activation, antiviral
+IFIT5	4.4986	0.002475	interferon-induced protein with tetratricopeptide repeats 5, single-stranded RNA binding
+CASP1	4.2968	0.005099	caspase 1, inflammasome effector, processes IL-1B and IL-18, pyroptosis
+IL6	5.0398	0.004498	interleukin 6, pleiotropic cytokine, acute phase response, pro-inflammatory in IAV
+IRF9	4.6208	0.002075	interferon regulatory factor 9, forms ISGF3 complex with STAT1/STAT2
+ADAR	5.1054	0.000543	adenosine deaminase RNA-specific, edits viral RNA, ISG, innate immune modulation
+MX1	9.0299	0.005772	MX dynamin-like GTPase 1, inhibits influenza virus replication, interferon-stimulated gene
+IFI27	6.0409	0.00041	interferon-alpha inducible protein 27, pro-apoptotic, ISG
+IFI44	6.7946	0.010435	interferon-induced protein 44, antiviral, GTPase activity
+TRAIL	4.1568	0.001832	TNF superfamily member 10 (TRAIL/TNFSF10), induces apoptosis in virus-infected cells
+STAT2	4.1673	0.000608	signal transducer and activator of transcription 2, type I interferon signaling, ISGF3 component
+IFIT3	6.7513	0.005138	interferon-induced protein with tetratricopeptide repeats 3, antiviral defense
+HERC6	5.2069	0.003025	HECT and RLD domain-containing E3 ubiquitin ligase family member 6, ISGylation
+IFNAR1	3.6601	0.000632	interferon alpha and beta receptor subunit 1, JAK-STAT signaling receptor
+IFNA1	4.7469	0.009213	interferon alpha 1, antiviral cytokine, type I interferon family
+EIF2AK2	5.8529	0.002299	eukaryotic translation initiation factor 2-alpha kinase 2 (PKR), senses dsRNA, inhibits translation
+CCL5	8.4652	0.002391	C-C motif chemokine ligand 5 (RANTES), recruits memory T cells and NK cells, anti-influenza
+IFI35	3.7983	0.005255	interferon-induced protein 35, forms complex with NMI, ISG

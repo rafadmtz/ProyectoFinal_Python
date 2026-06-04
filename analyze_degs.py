@@ -23,7 +23,6 @@
 import argparse
 import deseq_utils as du
 
-
 def parse_args() -> argparse.Namespace:
     """
     Lee los argumentos de línea de comandos para el análisis DESeq2.
@@ -54,14 +53,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--padj-threshold",
         type=float,
-        required=True,
+        default=0.05,
         help="Umbral de significancia estadística para padj. Default: 0.05."
     )
 
     parser.add_argument(
         "--lfc-threshold",
         type=float,
-        required=True,
+        default=1.0,
         help="Umbral mínimo de cambio en log2FoldChange. Default: 1.0."
     )
 
@@ -89,7 +88,7 @@ def main():
         gene_id = info.get("Name")
         description = info.get("description", "sin anotacion")
 
-        if gene_id:
+        if gene_id is not None:
             gene_dict[gene_id] = description
 
     umbral_padj = args.padj_threshold
@@ -105,7 +104,7 @@ def main():
     print("Genes extremos:")
     
     for categoria, gene in extremos.items():
-        if gene:
+        if gene is not None:
             print(f"  {categoria}: {gene['gene_id']} ({gene['description']})")
         else:
             print(f"  {categoria}: No se encontro un gen que cumpla los criterios.")
@@ -116,6 +115,13 @@ def main():
         extremos,
         args.output_dir,
         args.input,
+        umbral_padj,
+        umbral_lfc
+    )
+
+    du.guardar_volcano_plot(
+        clasificacion_df,
+        args.output_dir,
         umbral_padj,
         umbral_lfc
     )
