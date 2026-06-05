@@ -1,10 +1,11 @@
 import pandas as pd
 import sys
+import pytest
 from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT_DIR))
 
-from deseq_utils import classify_gene, find_extremes
+from deseq_utils import classify_gene, find_extremes, read_tsv
 
 # ── Uso de IA ───────────────────────────────────────────────
 # Herramienta : ChatGPT
@@ -19,6 +20,10 @@ from deseq_utils import classify_gene, find_extremes
 #                revisé los errores de importación y ajusté el archivo para que
 #                pytest pudiera encontrar mi módulo deseq_utils.py.
 # ────────────────────────────────────────────────────────────
+
+def test_read_tsv_file_not_found():
+    with pytest.raises(FileNotFoundError):
+        read_tsv("archivo_que_no_existe.tsv")
 
 def test_clasificar_upregulated():
     """Un gen con padj=0.01 y lfc=3.5 debe ser upregulated."""

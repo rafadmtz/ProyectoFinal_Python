@@ -70,13 +70,15 @@ def read_tsv(filepath: str) -> pd.DataFrame:
 
         return df
 
-    except FileNotFoundError:
-        print(f"No se encontro el archivo: {filepath}")
-        return None
+    except FileNotFoundError as error:
+        raise FileNotFoundError(
+        f"No se encontró el archivo: {filepath}"
+        ) from error
 
     except ValueError as error:
-        print(f"Error al leer valores numericos del TSV: {error}")
-        return None
+        raise ValueError(
+            f"Error al leer valores numericos del TSV: {error}"
+        ) from error
 
 def read_gff(filepath: str) -> pd.DataFrame:
     """
@@ -114,13 +116,15 @@ def read_gff(filepath: str) -> pd.DataFrame:
             names=columnas
         )
 
-    except FileNotFoundError:
-        print(f"No se encontro el archivo: {filepath}")
-        return None
-    
+    except FileNotFoundError as error:
+        raise FileNotFoundError(
+            f"No se encontró el archivo: {filepath}"
+        ) from error
+
     except ValueError as error:
-        print(f"Error al leer el archivo GFF: {error}")
-        return None
+        raise ValueError(
+            f"Error al leer el archivo GFF: {error}"
+        ) from error
 
     return gff
 
