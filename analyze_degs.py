@@ -74,12 +74,16 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 def main():
+    #Recibe los argumentos de linea de comandos
     args = parse_args()
 
+    # Lee el archivo TSV de DESeq2
     deseq_df = du.read_tsv(args.input)
 
+    # Lee el archivo GFF3 para obtener anotaciones de genes
     gff = du.read_gff(args.gff)
-
+    
+    #Diccionario para almacenar las anotaciones de los genes, con gene_id como clave y description como valor
     gene_dict = {}
 
     for attributes in gff["attributes"]:
@@ -91,9 +95,11 @@ def main():
         if gene_id is not None:
             gene_dict[gene_id] = description
 
+    # Define los umbrales para clasificar los genes
     umbral_padj = args.padj_threshold
     umbral_lfc = args.lfc_threshold
 
+    # Clasifica los genes segun los umbrales de padj y log2FoldChange
     clasificacion_df = du.classify_gene(deseq_df, umbral_padj, umbral_lfc)
 
     du.imprimir_resumen(
@@ -103,8 +109,10 @@ def main():
         umbral_lfc
     )
 
+    # Agrega anotacion funcional a los genes clasificados usando el diccionario de anotaciones
     anotacio_df=du.agregar_anotacion_funcional(clasificacion_df, gene_dict)
 
+    # Identifica los genes con cambios extremos (mayor log2FoldChange positivo y negativo entre los significativos)
     extremos = du.find_extremes(anotacio_df)
     print("Genes extremos:")
     
